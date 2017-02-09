@@ -1,0 +1,19 @@
+.switch-toggle.switch-candy, .switch-light.switch-candy > span{
+  background-color: #fff;
+}
+.switch-light.switch-candy span span, .switch-light.switch-candy input:checked ~ span span:first-child, .switch-toggle.switch-candy label{
+  text-shadow:none;
+  color: #d3d3d3;
+}
+.switch-toggle.switch-candy, .switch-light.switch-candy > span{
+  border-radius: 18px;
+}
+.switch-candy a{
+  border: 0px;
+}
+.switch-candy a {
+  background-color: #b82828;
+}
+.switch-light.switch-candy input ~ span span:first-child, .switch-light.switch-candy input:checked ~ span span:nth-child(2), .switch-candy input:checked + label{
+  color: rgba(255,255,255,0.8);
+}
