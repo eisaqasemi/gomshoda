@@ -2,7 +2,7 @@
   <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <a class="navbar-brand" href="#">Gomshoda</a>
+  <a class="navbar-brand" href="#">Jobs</a>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
@@ -27,14 +27,25 @@
           <div class="switch-ctrl">
             <div>
               <label class="switch-light switch-candy switch-android " onclick="">
-                <input type="checkbox">
+                <input type="checkbox"
+                       [checked]="user.toggle === toggles[0].value"
+                       (change)="$event.target.checked? (user.toggle =  toggles[0].value) : (user.toggle = toggles[1].value)" >
                 <span>
-                    <span>Found Something</span>
-                    <span>Lost Something</span>
+                    <span>Seeking Job</span>
+                    <span>Post a Job</span>
                     <a></a>
                 </span>
               </label>
             </div>
+          </div>
+      </div>
+      <div class="row">
+          <div *ngIf="user.toggle == 'seeking'">
+            <h2>Seeking Job</h2>
+          </div>
+
+          <div *ngIf="user.toggle == 'posting'">
+            <h2>Posting Job</h2>
           </div>
       </div>
     </div>
