@@ -10,7 +10,9 @@
 ###clone the repository
 
 `git clone git@github.com:eisaqasemi/gomshoda.git`
+
 `cd gomshoda`
+
 `npm install`
 
 
