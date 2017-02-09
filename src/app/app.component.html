@@ -31,8 +31,8 @@
                        [checked]="user.toggle === toggles[0].value"
                        (change)="$event.target.checked? (user.toggle =  toggles[0].value) : (user.toggle = toggles[1].value)" >
                 <span>
-                    <span>Seeking Job</span>
                     <span>Post a Job</span>
+                    <span>Seeking Job</span>
                     <a></a>
                 </span>
               </label>
@@ -40,13 +40,45 @@
           </div>
       </div>
       <div class="row">
-          <div *ngIf="user.toggle == 'seeking'">
-            <h2>Seeking Job</h2>
-          </div>
+        <div *ngIf="user.toggle == 'seeking'">
+          <h2>Seeking Job</h2>
+          <div style="width: 350px">
+            <fieldset>
+              <legend>View</legend>
+              <div class="switch-toggle switch-candy">
+                <input id="seek1" name="view" type="radio" checked>
+                <label for="seek1" onclick="">seek 1</label>
 
-          <div *ngIf="user.toggle == 'posting'">
-            <h2>Posting Job</h2>
+                <input id="seek2" name="view" type="radio">
+                <label for="seek2" onclick="">seek 2</label>
+
+                <input id="seek3" name="view" type="radio">
+                <label for="seek3" onclick="">seek 3</label>
+                <a></a>
+              </div>
+            </fieldset>
           </div>
+        </div>
+
+        <div *ngIf="user.toggle == 'posting'">
+          <h2>Posting Job</h2>
+          <div style="width: 350px">
+            <fieldset>
+              <legend>View</legend>
+              <div class="switch-toggle switch-candy">
+                <input id="post1" name="view" type="radio" checked>
+                <label for="post1" onclick="">Post 1</label>
+
+                <input id="post2" name="view" type="radio">
+                <label for="post2" onclick="">Post 2</label>
+
+                <input id="post3" name="view" type="radio">
+                <label for="post3" onclick="">post 3</label>
+                <a></a>
+              </div>
+            </fieldset>
+          </div>
+        </div>
       </div>
     </div>
     <div class="col-md-4"></div>

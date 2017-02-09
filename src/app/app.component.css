@@ -1,23 +1,32 @@
-.switch-toggle.switch-candy, .switch-light.switch-candy > span{
+.switch-ctrl{
+  color: #d3d3d3;
+}
+
+.switch-ctrl .switch-toggle.switch-candy, .switch-light.switch-candy > span{
   background-color: #fff;
 }
-.switch-light.switch-candy span span, .switch-light.switch-candy input:checked ~ span span:first-child, .switch-toggle.switch-candy label{
+.switch-ctrl .switch-light.switch-candy span span, .switch-light.switch-candy input:checked ~ span span:first-child, .switch-toggle.switch-candy label{
   text-shadow:none;
   color: #d3d3d3;
 }
-.switch-toggle.switch-candy, .switch-light.switch-candy > span{
+.switch-ctrl .switch-toggle.switch-candy, .switch-light.switch-candy > span{
   border-radius: 45px;
 }
-.switch-candy a{
+.switch-ctrl .switch-candy a{
   border: 0px;
 }
-.switch-candy a {
+.switch-ctrl .switch-candy a {
   background-color: #b82828;
 }
-.switch-light.switch-candy input ~ span span:first-child, .switch-light.switch-candy input:checked ~ span span:nth-child(2), .switch-candy input:checked + label{
-  color: rgba(255,255,255,0.8);
+.switch-ctrl .switch-light.switch-candy input ~ span span:first-child, .switch-light.switch-candy input:checked ~ span span:nth-child(2), .switch-candy input:checked + label{
+  /*color: rgba(255,255,255,0.8);*/
 }
 
 .switch-ctrl label > span{
   padding: 15px;
+}
+
+
+ input:focus ~ span a,  input:focus + label{
+  outline-width: 0px;
 }
