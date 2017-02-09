@@ -19,3 +19,8 @@
 ###serve the project
 
 `ng serve`
+
+
+##NOte
+
+the texts will be replaced
